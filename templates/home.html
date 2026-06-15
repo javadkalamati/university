@@ -4,6 +4,13 @@
         <title>Home page</title>
     </head>
     <body>
-        <h2>hello world...!</h2>
+       
+        {% for student in student %}
+            <h3>{{ student.name }}</h3> <small>{{student.mellinumber}}</small> <h3>{{student.birthday}}</h3>
+            
+
+        {% endfor %}
     </body>
+        
+        
 </html>
