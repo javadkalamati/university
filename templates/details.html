@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table table-success">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>family</th>
+                <th>mellinumber</th>
+                <th>address</th>
+                <th>birthday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{student.name}}</td>
+                <td>{{student.family}}</td>
+                <td>{{student.mellinumber}}</td>
+                <td>{{student.address}}</td>
+                <td>{{student.birthday}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

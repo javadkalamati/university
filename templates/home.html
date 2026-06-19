@@ -1,16 +1,34 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home page</title>
-    </head>
-    <body>
-       
-        {% for student in student %}
-            <h3>{{ student.name }}</h3> <small>{{student.mellinumber}}</small> <h3>{{student.birthday}}</h3>
+{% extends 'base.html' %}
+    <style>
+        .main{
+            background-color: cornflowerblue;
+        }
+    </style>
+{% block content %}  
+    <div class="main">
+        <table class="table table-success table-bordered">  
+            <thead class="table-secondary">
+                <tr>
+                    <th scope="col">name</th>
+                
+                </tr> 
             
-
-        {% endfor %}
-    </body>
+            </thead>
+            <tbody class="table-success">
+                
+                {% for student in student %}
+                    <tr scope="row">
+                        <td>
+                            <a href="/student/details/{{ student.id }}"><h3>{{ student.name }}</h3></a> 
+                        </td>
+                        
+                
+                    </tr>   
+                    {% endfor %}
+                </tr>
+            </tbody>
+                
         
-        
-</html>
+        </table>
+    </div>
+{% endblock %}
