@@ -15,15 +15,16 @@
             
             </thead>
             <tbody class="table-success">
-                
-                {% for student in student %}
-                    <tr scope="row">
-                        <td>
-                            <a href="/student/details/{{ student.id }}"><h3>{{ student.name }}</h3></a> 
-                        </td>
+                <div class="card">
+                    {% for student in student %}
+                        <tr scope="row">
+                            <td>
+                                <a  class= "card-body" href="{% url 'details' student.id  %}"><h3>{{ student.name }}</h3></a> 
+                            </td>
                         
                 
-                    </tr>   
+                        </tr>  
+                    </div> 
                     {% endfor %}
                 </tr>
             </tbody>

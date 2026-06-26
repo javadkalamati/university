@@ -8,6 +8,8 @@
                 <th>mellinumber</th>
                 <th>address</th>
                 <th>birthday</th>
+                <th>Delete</th>
+                <th>update</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +19,8 @@
                 <td>{{student.mellinumber}}</td>
                 <td>{{student.address}}</td>
                 <td>{{student.birthday}}</td>
+                <td><a class="btn btn-danger"  href="{% url 'delete' student.id %}">Delete</a></td>
+                <td><a class="btn btn-info"  href="{% url 'update' student.id %}">update</a></td>
             </tr>
         </tbody>
     </table>
